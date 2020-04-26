@@ -2,6 +2,14 @@ const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 
 module.exports = {
+  pages: {
+    index: {
+      entry: 'src/main.js',
+      template: 'public/index.html',
+      filename: 'index.html',
+      title: '度假屋、民宿、体验和攻略 - Airbnb 爱彼迎'
+    }
+  },
   devServer: {
     port: 8000,
     proxy: {
