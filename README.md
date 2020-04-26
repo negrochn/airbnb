@@ -1,2 +1,24 @@
 # airbnb
-仿照 Airbnb ，使用 Vue.js ，研究网站中有趣的组件，动手实践，提升能力。
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
