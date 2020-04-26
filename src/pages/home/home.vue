@@ -1,11 +1,17 @@
 <template>
-  <div>Home</div>
+  <div>
+    <Header />
+  </div>
 </template>
 
 <script>
+import Header from 'components/header/header'
+
 export default {
   name: 'Home',
-  components: {},
+  components: {
+    Header
+  },
   mixins: [],
   props: {},
   data () {
