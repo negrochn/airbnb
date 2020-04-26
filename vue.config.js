@@ -7,7 +7,7 @@ module.exports = {
       entry: 'src/main.js',
       template: 'public/index.html',
       filename: 'index.html',
-      title: '度假屋、民宿、体验和攻略 - Airbnb 爱彼迎'
+      title: '民宿_酒店_公寓_短租住宿预订平台_旅游攻略和体验 - Airbnb爱彼迎'
     }
   },
   devServer: {
