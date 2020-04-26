@@ -1,4 +1,4 @@
-const Home = () => import('@/pages/home/home')
+const Home = () => import('pages/home/home')
 
 const routes = [
   {
