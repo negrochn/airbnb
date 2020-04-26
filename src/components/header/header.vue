@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <div class="header-logo">
+      <svg><use xlink:href="#icon-logo" /></svg>
     </div>
   </header>
 </template>
