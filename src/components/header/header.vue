@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header-logo">
-      <svg><use xlink:href="#icon-logo" /></svg>
+      <IconSvg iconName="logo" className="icon-logo" />
     </div>
   </header>
 </template>
@@ -9,12 +9,10 @@
 <script>
 export default {
   name: 'Header',
-  components: {},
   mixins: [],
   props: {},
   data () {
-    return {
-    }
+    return {}
   },
   computed: {},
   watch: {},
@@ -32,6 +30,10 @@ export default {
     &-logo {
       width: 82px;
       height: 80px;
+      .icon-logo {
+        color: #fff;
+        font-size: 34px;
+      }
     }
   }
 </style>
