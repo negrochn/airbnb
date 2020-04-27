@@ -2,7 +2,7 @@
 
 我们在分析 Airbnb 时，发现网站中很多图标是以 <svg> 标签的方式引入的。为了与 Airbnb 的图标保持一致，我们也将采用 <svg> 标签的方式。
 
-![airbnb-use-svg.png]()
+![airbnb-use-svg.png](https://github.com/negrochn/airbnb/blob/master/doc/images/svg-sprite-loader/airbnb-use-svg.png?raw=true)
 
 为了能够在我们的项目中使用 Airbnb 上的 <svg> ，我们需要执行以下步骤：
 
@@ -13,7 +13,7 @@
 
 chrome 网上应用店，搜索并安装 ==Export SVG with Style== 。
 
-![export-svg-with-style.png]()
+![export-svg-with-style.png](https://github.com/negrochn/airbnb/blob/master/doc/images/svg-sprite-loader/export-svg-with-style.png?raw=true)
 
 chrome 浏览器访问 https://www.airbnb.cn/ ，鼠标左键点击 Export SVG 插件，下载网站所有的 .svg 文件。
 
