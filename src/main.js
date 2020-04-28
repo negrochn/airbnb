@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import '@/icons'
 import 'reset.css'
+import 'styles/index.less'
 
 Vue.config.productionTip = false
 
