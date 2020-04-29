@@ -6,11 +6,20 @@
         :class="inputClass"
         type="text"
         :placeholder="placeholder"
+        v-model="inputValue"
         @focus="isExpanded = true"
-        @input="isExpanded = true"
         @blur="isExpanded = false"
       />
-      <IconSvg iconName="delete" className="icon-delete" />
+      <!-- 
+        1.事件优先级： mousedown > blur > click ，所以使用 mousedown;
+        2.在 IconSvg 组件的根元素上监听 mousedown 事件，需要用到 .native
+       -->
+      <IconSvg
+        v-show="isExpanded && inputValue"
+        iconName="delete"
+        className="icon-delete"
+        @mousedown.native.prevent="onInputClear"
+      />
     </div>
   </div>
 </template>
@@ -28,29 +37,32 @@ export default {
   },
   data () {
     return {
-      isExpanded: false
+      isExpanded: false,
+      inputValue: ''
     }
   },
   computed: {
     headerSearchClass () {
-      let className = 'header-search'
-      if (this.isExpanded) {
-        className += ' expanded'
-      }
-      return className
+      return [
+        'header-search',
+        { expanded: this.isExpanded }
+      ]
     },
     inputClass () {
-      let className = 'input'
-      if (this.isExpanded) {
-        className += ' input-expanded'
-      }
-      return className
+      return [
+        'input',
+        { 'input-expanded': this.isExpanded }
+      ]
     }
   },
   watch: {},
   created () {},
   mounted () {},
-  methods: {}
+  methods: {
+    onInputClear () {
+      this.inputValue = ''
+    }
+  }
 }
 </script>
 
@@ -65,7 +77,9 @@ export default {
     background: #FFF;
     border: 1px solid #EBEBEB;
     border-radius: 4px;
+    transition: width 200ms ease-in; // @new ，增加动画效果
     &-wrap {
+      position: relative;
       display: flex;
       align-items: center;
       width: 100%;
@@ -83,6 +97,7 @@ export default {
         flex: 1;
         margin-top: -3px; // @效果一致性处理
         height: 22px;
+        font-family: inherit;
         font-size: 17px;
         font-weight: 800;
         border: 0;
@@ -92,7 +107,12 @@ export default {
         }
       }
       .icon-delete {
+        position: absolute;
+        right: 0;
+        padding: 1px 6px 1px 12px;
         font-size: 12px;
+        color: #767676;
+        cursor: pointer;
       }
     }
   }

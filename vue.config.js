@@ -10,6 +10,7 @@ module.exports = {
       title: '民宿_酒店_公寓_短租住宿预订平台_旅游攻略和体验 - Airbnb爱彼迎'
     }
   },
+  lintOnSave: false,
   devServer: {
     port: 8000,
     proxy: {
