@@ -39,6 +39,7 @@ export default {
   .header {
     position: relative;
     display: flex;
+    width: 100%;
     height: 81px;
     background: #ccc;
     &-left {

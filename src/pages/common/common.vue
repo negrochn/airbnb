@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header />
+    <Header :style="headerStyle" class="common-header" />
     <router-view />
   </div>
 </template>
@@ -18,7 +18,15 @@ export default {
   data () {
     return {}
   },
-  computed: {},
+  computed: {
+    headerStyle() {
+      let style = ''
+      if (this.$route.path === '/home') {
+        style = 'position: absolute;'
+      }
+      return style
+    }
+  },
   watch: {},
   created () {},
   mounted () {},
