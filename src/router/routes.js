@@ -1,13 +1,16 @@
-const Home = () => import('pages/home/home')
+const Common = () => import('pages/common/common')
 
 const routes = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
-    component: Home
+    redirect: '/home',
+    component: Common,
+    children: [
+      {
+        path: '/home',
+        component: () => import('pages/home/home')
+      }
+    ]
   }
 ]
 

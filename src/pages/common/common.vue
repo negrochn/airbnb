@@ -1,13 +1,18 @@
 <template>
   <div>
-    Home
+    <Header />
+    <router-view />
   </div>
 </template>
 
 <script>
+import Header from 'components/header/header'
+
 export default {
-  name: 'Home',
-  components: {},
+  name: 'Common',
+  components: {
+    Header
+  },
   mixins: [],
   props: {},
   data () {
