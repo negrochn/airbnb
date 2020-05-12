@@ -6,16 +6,21 @@
     <div class="header-center">
       <HeaderSearch />
     </div>
+    <div class="header-right">
+      <HeaderNav />
+    </div>
   </header>
 </template>
 
 <script>
 import HeaderSearch from './header-search'
+import HeaderNav from './header-nav'
 
 export default {
   name: 'Header',
   components: {
-    HeaderSearch
+    HeaderSearch,
+    HeaderNav
   },
   mixins: [],
   props: {},
@@ -48,6 +53,7 @@ export default {
       }
     }
     &-center {
+      flex: 1;
       display: flex;
       align-items: center;
     }
