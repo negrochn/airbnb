@@ -41,7 +41,8 @@ export default {
     display: flex;
     width: 100%;
     height: 81px;
-    background: #ccc;
+    background: transparent;
+    z-index: 5;
     &-left {
       display: flex;
       justify-content: center;

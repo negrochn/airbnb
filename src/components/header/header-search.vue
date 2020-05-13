@@ -71,6 +71,7 @@ export default {
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    margin-top: -2px; // @效果一致性处理
     margin-left: -2px; // @效果一致性处理
     width: 460px;
     height: 48px;
@@ -82,9 +83,10 @@ export default {
       position: relative;
       display: flex;
       align-items: center;
-      width: 100%;
       padding: 0 4px 0 12px;
+      width: 100%;
       .icon-search {
+        margin-top: 2px; // @效果一致性处理
         margin-left: 5px;
         margin-right: 16px;
         width: 18px;
@@ -95,7 +97,7 @@ export default {
       .input {
         box-sizing: border-box;
         flex: 1;
-        margin-top: -3px; // @效果一致性处理
+        margin-top: -2px; // @效果一致性处理
         height: 22px;
         font-family: inherit;
         font-size: 17px;
